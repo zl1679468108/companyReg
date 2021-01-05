@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    position: relative;
+    background: url(/images/bg_index.jpg) no-repeat top center;
+    background-color: #343240;
+    overflow-x: hidden;
+}
+/******************************************头部导航**************************************** */
+header{
+    height: 90px;
+    background:url(/images/navbar_bg.png);
+    position: relative;
+    z-index: 5;
+}
+header nav{
+    width: 1230px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+header nav>img{
+    width: 145px;
+    height: 100%;
+}
+header nav>ul{
+    width: 720px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+header nav>ul>li{
+    color: #fff;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 16px;
+}
+header nav>ul>li:hover{
+    color: #ec3833;
+    cursor: pointer;
+}
+/*头部右侧按钮*/
+header .navbar-status{
+    width: 256px;
+    height: 90px;
+}
+header .navbar-status{
+    display: flex;
+}
+.navbar-status .login-btn{
+    width: 96px;
+    display: flex;
+    align-items: center;
+}
+.navbar-status .login-btn span{
+    width: 96px;
+    height: 40px;
+    color: #fad65c;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    background: url(../images/sprites_btn.png) -1100px -300px;
+    text-align: center;
+    line-height: 40px;
+}
+.navbar-status .login-btn span:hover{
+    color: #986b0d;
+    background-position: -1210px -240px;
+    cursor: pointer;
+}
+.navbar-status .pay-btn{
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-status .pay-btn span{
+    color: #986b0d;
+    width: 136px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    background: #fbd74f;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/*二级菜单*/
+nav ol{
+    width: 98vw;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    display: flex;
+    visibility: hidden;
+    background: rgb(41 39 39 / 34%);
+    color: #fff;
+    cursor: default;
+}
+nav ol li{
+    margin-right: 25px;
+    font-size: 12px;
+}
+nav ol li:hover{
+    cursor: pointer;
+    color: red;
+}
+header nav>ul>li:hover >ol{
+    visibility: visible;
+    
+}
+nav .ol1{
+    padding-left: 33.7%;
+}
+nav .ol2{
+    padding-left: 47.9%;
+}
+nav .ol3{
+    padding-left: 52.7%;
+}
+/**********************************************轮播区*******************************************/
+.imgSlider{
+    width: 1180px;
+    height: 690px;
+    margin: 0px auto;
+    position: relative;
+
+}
+.imgSlider .prev{
+    position: absolute;
+    top: 50%;
+    margin-top: 5px;
+    left: -57px;
+    width: 56px;
+    height: 90px;
+    cursor: pointer;
+    background: url(/images/sprites_index.png) no-repeat -160px -150px;
+}
+.imgSlider .next{
+    position: absolute;
+    right: -57px;
+    top: 50%;
+    margin-top: 5px;
+    width: 56px;
+    height: 90px;
+    cursor: pointer;
+    background: url(/images/sprites_index.png) no-repeat -220px -150px;
+}
+.imgSlider .slider{
+    overflow: hidden;
+}
+.slider .allImg{
+    width: 4800px;
+    display: flex;
+    /* transform: translateX(); */
+    transform-style:preserve-3d;
+    transition: all .3s;
+}
+/* 指示灯 */
+.sliderIcon{
+    display: flex;
+    justify-content: center;
+    
+}
+.sliderIcon li{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    background: url(/images/sprites_index.png) no-repeat -250px -16px
+}
+.sliderIcon .current{
+    background-position: -250px 0;
+}
+
+/* ************************************************内容区******************************************* */
+.content{
+    width: 1180px;
+    height: 265px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+.content .list{
+    width: 220px;
+    height: 265px;
+    text-align: center;
+    background: #282730;
+    border-bottom: 5px solid #FAD65C;
+    margin: 0px 15px;
+}
+.content .list>a{
+    display: block;
+    height: 100%;
+    font-size: 18px;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+}
+.content .list h3{
+    padding-top: 26px;
+    position: relative;
+    z-index: 2;
+}
+.content .list p{
+    position: relative;
+    z-index: 2;
+}
+.content .list img{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: all .2s;
+}
+.content .list:hover img{
+    transform: translateY(-10px);
+}
+/* **********************************************底部浮窗******************************************** */
+.wrapper{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(38,36,42,0.9);
+    display: none;
+}
+.wrapper .wrapperAll{
+    width: 1230px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+.wrapperAll >img{
+    position: absolute;
+    left: 0;
+    top: -47px;
+}
+.wrapperAll >h2{
+    height: 100%;
+    line-height: 90px;
+    position: absolute;
+    left: 410px;
+    color: #fff;
+}
+.wrapperAll .vip_pay{
+    display: block;
+    font-size: 18px;
+    color: #ec3833;
+    line-height: 90px;
+    height: 90px;
+    position: absolute;
+    right: 380px;
+    cursor: pointer;
+}
+.wrapperAll .svip_pay{
+    display: block;
+    position: absolute;
+    right: 50px;
+    
+    padding: 0 76px 0 48px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 30px;
+    color: #7A4702;
+    background-color: #FAD65C;
+}
+.wrapperAll .svip_pay:hover{
+    background-color: #FEE691;
+}
+/* ***********************************************页脚******************************************* */
+footer{
+    margin: 50px 0px;
+    height: 300px;
+}
+.footerIcon{
+    width: 830px;
+    height: 170px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footerIcon >a{
+    width: 100px;
+    height: 103px;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.footerIcon >a:hover .qrcode{
+    display: block;
+}
+.footerIcon i{
+    display: block;
+    width: 100px;
+    height: 85px;
+    cursor: pointer;
+ 
+}
+.footerIcon a span{
+    color: #7e7e7e;
+    font-size: 14px;
+}
+.footerIcon >a .qrcode{
+    width: 216px;
+    height: 221px;
+    display: none;
+    text-align: center;
+    background: url(/images/footer_popup.png) no-repeat 0 0;
+    position: absolute;
+    top: -200px;
+    left: -56px;   
+}
+.footerIcon .qrcode img{
+    margin: 23px 0 0 0;
+}
+.footerIcon .icon-qq{
+    background: url(/images/sprites_footer.png) no-repeat  0 0;
+}
+.footerIcon .icon-wechat{
+    background: url(/images/sprites_footer.png) no-repeat  0 -100px;
+}
+.footerIcon .icon-bbs{
+    background: url(/images/sprites_footer.png) no-repeat  0 -300px;
+}
+.footerIcon .icon-qzone{
+    background: url(/images/sprites_footer.png) no-repeat  0 -400px;
+}
+.footerIcon .icon-weibo{
+    background: url(/images/sprites_footer.png) no-repeat  0 -500px;
+}
+.footerIcon .icon-exchange{
+    background: url(/images/sprites_footer.png) no-repeat  0 -200px;
+}
+.footerIcon .icon-service{
+    background: url(/images/sprites_footer.png) no-repeat  0px -600px;
+}
+.footerIcon >a:nth-child(1):hover i{
+    background-position: -100px 0;
+}
+.footerIcon >a:nth-child(2):hover i{
+    background-position: -100px -100px;
+}
+.footerIcon >a:nth-child(3):hover i{
+    background-position: -100px -300px;
+}
+.footerIcon >a:nth-child(4):hover i{
+    background-position: -100px -400px;
+}
+.footerIcon >a:nth-child(5):hover i{
+    background-position: -100px -500px;
+}
+.footerIcon >a:nth-child(6):hover i{
+    background-position: -100px -200px;
+}
+.footerIcon >a:nth-child(7):hover i{
+    background-position: -100px -600px;
+}
+/********************页脚版权***********************/
+.footerCopyright{
+    color: #9d9d9d;
+    font-size: 12px;
+    line-height: 1.6em;
+    margin-bottom: 5px;
+    text-align: center;
+}
